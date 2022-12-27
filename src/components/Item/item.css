@@ -14,8 +14,8 @@
   }
   
   .item-card_header{
-    color:rgb(156, 156, 156);
-    background-color: #E9E8E6;
+    color:rgb(255, 255, 255);
+    background-color: #e5908a;
     font-size: large;
   }
   
@@ -25,7 +25,7 @@
   }
   
   .item-card_img{
-    background-color: #E9E8E6;
+    background-color: #e5908a;
     max-height: 350px;
     width: 280px;
     object-fit: cover;

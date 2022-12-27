@@ -1,13 +1,15 @@
 import "./navbar.css";
 
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo2.png'
 
 function NavBar(){
     return(
         <nav>
             <ul className="nav-menu">
                 <li>
-                    <a>Logo</a>
+                    <a href="#">
+                        <img className="logo" src={logo} />
+                    </a>
                 </li>
 
                 <li className="nav-item">

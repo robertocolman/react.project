@@ -1,5 +1,6 @@
 import './App.css';
 
+import Footer from './components/footer/Footer';
 import Hola from './components/hola/Hola';
 import ItemListContainer from './components/itemListContainer.jsx/ItemListContainer';
 import NavBar from './components/navbar/NavBar'
@@ -11,8 +12,8 @@ function App(){
     <>
     <NavBar />
     <Hola />
-    <hr></hr>
     <ItemListContainer />
+    <Footer />
     </>
   );
 }
