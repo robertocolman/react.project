@@ -1,0 +1,25 @@
+.nav-menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    height: 99px;
+    top: 0;
+    margin-bottom: 45px;
+    background-color: rgb(182, 182, 182);
+    box-shadow: rgba(0, 0, 0, 0.5254901961) 0px 0px 20px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-weight : 400;
+    font-size: 1.15em;
+    color:rgb(59, 59, 50);
+}
+
+.nav-Link:hover{
+    font-weight: 600;
+    color:rgb(19, 19, 17)
+}
