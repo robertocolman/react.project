@@ -1,12 +1,34 @@
+import React, {useEffect, useState} from "react";
+
 import FlexWrapper from '../flexWrapper/FlexWrapper';
 import Item from '../Item/Item';
-import React from "react";
-import imgcafe from '../../assets/img/capuccino.webp';
+import getItems from '../../services/mockAsyncService'
 
 function ItemListContainer(){
+
+    const [products, setProducts] = useState([]);
+
+    console.log("Renderizamos al componente")
+    
+    getItems().then((respuesta)=>{
+        console.log(respuesta)
+        setProducts(respuesta)
+    });
+    
+
     return<>       
             <FlexWrapper>
-                <Item title="cafe suave"
+                {products.map((item) => (
+                    <Item 
+                        key={item.title}
+                        id={item.id}
+                        title={item.title}
+                        price={item.price}
+                        detail={item.detail}
+                        imgurl={item.imgurl}
+                        />
+                ))}
+                {/* <Item title="cafe suave"
                 price={400}
                 detail="cafe suave marca dolca"
                 imgurl="https://farmacityar.vteximg.com.br/arquivos/ids/210957-1000-1000/221824_cafe-instantaneo-nescafe-dolca-suave-x-170-g_imagen-1.jpg?v=637587796594730000"
@@ -25,7 +47,7 @@ function ItemListContainer(){
                 price={1000}
                 detail="cafe latte dolca"
                 imgurl='/assets/img/latte.png'
-                />
+                /> */}
             </FlexWrapper>
         </>;
 }
