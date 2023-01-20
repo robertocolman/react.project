@@ -2,6 +2,7 @@ import "./itemdetail.css";
 
 import React, { useEffect, useState } from "react";
 
+import ItemCount from "../itemCount/ItemCount";
 import { getSingleItem } from "../../services/mockAsyncService";
 import { useParams } from "react-router-dom";
 
@@ -32,6 +33,7 @@ function ItemDetailContainer() {
         <h2 className="priceTag">$ {product.price}</h2>
         <small>{product.detail}</small>
       </div>
+      <ItemCount />
     </div>
   );
 }

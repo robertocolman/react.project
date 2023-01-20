@@ -1,5 +1,6 @@
 import "./navbar.css";
 
+import { ButtonChild } from "../button/Button";
 import { Link } from "react-router-dom";
 import logo from '../../assets/img/logo2.png'
 
@@ -21,7 +22,8 @@ function NavBar(){
             <li>
               <Link to="/contacto">Contacto</Link>
             </li>
-              </ul>
+            <ButtonChild onClick={() => alert("click")}>Login</ButtonChild>
+            </ul>
             <span>🛒</span>
           </nav>
     );

@@ -11,7 +11,17 @@ export default function Button (props) {
 export function ButtonChild(props){
     console.log(props);
 
+    function handleClick(){
+        props.onClick();
+    }
+
     return (
-    <button className="btn" style={{backgroundColor: props.color}}>{props.children}</button>
+    <button 
+        onClick={handleClick}
+        className="btn" 
+        style={{backgroundColor: props.color}}
+    >
+        {props.children}
+    </button>
     );
 }
